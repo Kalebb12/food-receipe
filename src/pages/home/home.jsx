@@ -11,7 +11,7 @@ const Home = () => {
         recipeList.map((item) => <RecipeItem item={item} key={item.id} />)
       ) : null}
       {loading && <div className="block">loading... please wait!</div>}
-      {recipeList.length <=0 && <div className="lg:text-4xl text-xl text-center text-black font-extrabold ">
+      {!recipeList.length  && <div className="lg:text-4xl text-xl text-center text-black font-extrabold ">
           Nothing to show .please search somthing
         </div>}
     </div>
